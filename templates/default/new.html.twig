@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ form_start(form) }}
+    {{ form_start(form, {action: path('app_default_new')}) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}
 {% endblock %}

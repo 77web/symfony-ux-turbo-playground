@@ -9,4 +9,10 @@
         <li>{{ task.title }}</li>
     {%- endfor %}
 </ul>
+
+<h1>Add a task</h1>
+{{ form_start(form, {action: path('app_default_new')}) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
 {% endblock %}

@@ -24,8 +24,11 @@ class DefaultController extends AbstractController
     #[Route('/', name: 'default')]
     public function index(): Response
     {
+        $form = $this->formFactory->create(TaskType::class);
+
         return $this->render('default/index.html.twig', [
             'tasks' => $this->taskRepository->findAll(),
+            'form' => $form->createView(),
         ]);
     }
 
