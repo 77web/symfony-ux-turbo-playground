@@ -11,8 +11,10 @@
 </ul>
 
 <h1>Add a task</h1>
+<turbo-frame id="task-form">
 {{ form_start(form, {action: path('app_default_new')}) }}
 {{ form_widget(form) }}
 {{ form_end(form) }}
+</turbo-frame>
 
 {% endblock %}
